@@ -771,12 +771,12 @@ button .modal-label > .modal-comment-textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms linear;
+  transition: background-color var(--transition-fast) var(--transition-function);
 }
 
 .checkbox-icon {
   fill: transparent;
-  transition: fill 250ms linear;
+  transition: fill var(--transition-fast) var(--transition-function);
 }
 
 .modal-checkbox:checked + .checkbox-custom {
