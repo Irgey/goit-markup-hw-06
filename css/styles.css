@@ -397,7 +397,11 @@ header {
   fill: var(--accent-color);
 }
 
-/* Footer */
+/**
+  |============================
+  | Footer
+  |============================
+*/
 .page > .footer {
   background-color: var(--secondary-bg-color);
   padding-top: 60px;
@@ -441,8 +445,9 @@ header {
 .social-company-wrapper {
   display: flex;
   flex-direction: column;
+  margin-right: 93px;
 }
-.social-company-wrapper > .title {
+.footer .title {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -462,7 +467,71 @@ header {
 .social-company-wrapper .socials-link:focus {
   background-color: var(--accent-color);
 }
-/* portfolio.html */
+/* Subscribe section */
+/* Subscribe container */
+.subscribe-form-wrapper {
+  display: flex;
+}
+/* Input field */
+.subscribe-form-wrapper > .input-field {
+  width: 358px;
+  height: 50px;
+
+  padding-left: 16px;
+  margin-right: 12px;
+
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  transition: border-color var(--transition-fast) var(--transition-function);
+}
+.subscribe-form-wrapper > .input-field:hover,
+.subscribe-form-wrapper > .input-field:focus {
+  border-color: var(--accent-color);
+  outline: 1px solid transparent;
+}
+border-color: var(--accent-color);
+outline: 1px solid transparent;
+.subscribe-form-wrapper > .input-field::placeholder {
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+/* Subscribe button */
+.subscribe-button {
+  padding: 10px 28px;
+
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: background-color var(--transition-fast) var(--transition-function);
+}
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: var(--button-active);
+}
+.send-button-icon {
+  margin-left: 10px;
+}
+/**
+  |============================
+  | Portfolio page
+  |============================
+*/
 /* Projects section (portfolio.html) */
 .categories-buttons {
   display: flex;
@@ -554,7 +623,6 @@ header {
 }
 
 .button.primary {
-  display: inline-block;
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -593,7 +661,7 @@ header {
 }
 /* Modal window */
 .modal {
-  display: flex;
+  padding: 40px;
   position: absolute;
   width: 528px;
   min-height: 581px;
@@ -609,7 +677,153 @@ header {
   transition: opacity 500ms ease var(--transition-slow),
     transform 1000ms ease var(--transition-slow);
 }
+/* Modal form */
+.modal-title {
+  display: block;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+.modal-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.modal-label:not(:last-child) {
+  margin-bottom: 10px;
+}
+.modal-label > .input-field,
+.modal-label > .modal-comment-textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--transition-fast) var(--transition-function);
+}
+
+.modal-label > input {
+  height: 40px;
+  padding-left: 35px;
+  padding-right: 5px;
+}
+
+.modal-label > input:hover,
+.modal-label > input:focus,
+.modal-label > .modal-comment-textarea:hover,
+.modal-label > .modal-comment-textarea:focus {
+  border-color: var(--accent-color);
+  outline: 1px solid transparent;
+}
+
+.modal-label > .input-field:hover ~ .modal-icon,
+.modal-label > .input-field:focus ~ .modal-icon,
+.modal-btn-close:hover .modal-icons {
+  fill: var(--accent-color);
+}
+
+.modal-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  transition: fill var(--transition-fast) var(--transition-function);
+}
+
+.modal-label > .modal-comment-textarea {
+  resize: none;
+  padding: 12px 16px;
+  height: 120px;
+}
+button .modal-label > .modal-comment-textarea::placeholder {
+  color: rgb(169, 169, 169);
+  font-size: 12px;
+}
+
+.modal-comment {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+/* custom checkbox */
+.modal-label-checkbox {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 0 12px;
+}
+.modal-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.checkbox-custom {
+  height: 19px;
+  width: 19px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms linear;
+}
+
+.checkbox-icon {
+  fill: transparent;
+  transition: fill 250ms linear;
+}
+
+.modal-checkbox:checked + .checkbox-custom {
+  background-color: var(--accent-color);
+}
+
+.modal-checkbox:checked + .checkbox-custom > .checkbox-icon {
+  fill: var(--primary-white-color);
+}
+.user-agreement-link {
+  color: var(--accent-color);
+}
 /* Modal buttons */
+/* Submit */
+.button.primary.modal-btn-submit {
+  display: block;
+  background-color: var(--accent-color);
+  width: 200px;
+  padding: 10px 52px;
+  margin: 0 auto;
+
+  margin-top: 30px;
+
+  transition: background-color var(--transition-fast) var(--transition-function);
+}
+.button.primary.modal-btn-submit:hover {
+  background-color: var(--button-active);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+/* Close */
+.modal-btn-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.modal-icons {
+  transition: fill var(--transition-fast) var(--transition-function);
+}
+/* Backdrop */
 .backdrop {
   position: fixed;
   top: 0;
@@ -626,19 +840,7 @@ header {
   visibility: hidden;
   pointer-events: none;
 }
-.modal-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-}
+
 .backdrop.is-hidden .modal {
   opacity: 0;
   transform: translateX(-50%) translateY(-70%);
