@@ -666,7 +666,6 @@ outline: 1px solid transparent;
   padding: 40px;
   position: absolute;
   width: 528px;
-  min-height: 581px;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -720,7 +719,8 @@ outline: 1px solid transparent;
 
 .modal-label > .input-field:hover ~ .modal-icon,
 .modal-label > .input-field:focus ~ .modal-icon,
-.modal-btn-close:hover .modal-icons {
+.modal-btn-close:hover .modal-icons,
+.modal-btn-close:focus .modal-icons {
   fill: var(--accent-color);
 }
 

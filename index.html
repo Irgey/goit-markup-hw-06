@@ -584,6 +584,7 @@
               type="email"
               name="subscribe_mail_field"
               placeholder="E-mail"
+              required
             />
             <button class="subscribe-button" type="submit">
               Підписатися
@@ -616,31 +617,46 @@
         >
         <form class="modal-form">
           <!-- Name field -->
-          <label class="modal-label" for="modal_name_field">
+          <label class="modal-label">
             <span class="modal-comment">Ім'я</span>
-            <input class="input-field" type="text" name="modal_name_field" />
+            <input
+              class="input-field"
+              type="text"
+              name="modal_name_field"
+              required
+            />
             <svg class="modal-icon" width="18" height="18">
               <use href="./images/sprite.svg#icon-person-black"></use>
             </svg>
           </label>
           <!-- Telephone field -->
-          <label class="modal-label" for="modal_tel_field">
+          <label class="modal-label">
             <span class="modal-comment">Телефон</span>
-            <input class="input-field" type="tel" name="modal_tel_field" />
+            <input
+              class="input-field"
+              type="tel"
+              name="modal_tel_field"
+              required
+            />
             <svg class="modal-icon" width="18" height="18">
               <use href="./images/sprite.svg#icon-phone-black"></use>
             </svg>
           </label>
           <!-- E-mail field -->
-          <label class="modal-label" for="modal_mail_field">
+          <label class="modal-label">
             <span class="modal-comment">Поштa</span>
-            <input class="input-field" type="email" name="modal_mail_field" />
+            <input
+              class="input-field"
+              type="email"
+              name="modal_mail_field"
+              required
+            />
             <svg class="modal-icon" width="18" height="18">
               <use href="./images/sprite.svg#icon-email-black"></use>
             </svg>
           </label>
           <!-- User comment field -->
-          <label class="modal-label" for="modal_commentary_field">
+          <label class="modal-label">
             <span class="modal-comment">Коментар</span>
             <textarea
               class="modal-comment-textarea"
@@ -650,7 +666,7 @@
           </label>
           <!-- User agreement checkbox field -->
           <label class="modal-label-checkbox">
-            <input class="modal-checkbox" type="checkbox" />
+            <input class="modal-checkbox" type="checkbox" required />
             <span class="checkbox-custom">
               <svg class="checkbox-icon" width="18" height="18">
                 <use href="./images/sprite.svg#icon-checkmark"></use>
